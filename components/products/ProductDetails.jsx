@@ -1,5 +1,6 @@
 import { getProductDetails } from '@/lib/products'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const ProductDetails = ({ id }) => {
     const product = getProductDetails(id)
@@ -18,13 +19,13 @@ const ProductDetails = ({ id }) => {
                     </div>
                     <div className="w-full lg:w-5/12">
                         <h1 className="italic text-xl lg:text-3xl font-serif font-semibold">{title}</h1>
-                        <span className="text-[#919090] my-3">{category}</span>
+                        <span className="text-[#919090] my-3">
+                            <Link href={`/category/${category}`} >{category}</Link>
+                        </span>
                         <div className="mt-3 flex items-center justify-start gap-1">
                             {Array.from({ length: rating }).map((_, index) => (
-                                <><Image src="/assets/svg/star.svg" width={20} height={20} alt="" /></>
+                                <div key={index} ><Image src="/assets/svg/star.svg" width={20} height={20} alt="" /></div>
                             ))}
-
-
                         </div>
                         <hr className="my-5 bg-black" />
 

@@ -18,7 +18,7 @@ const ProductList = () => {
                 {product.title}
               </Link>
               <span className="text-[#919090]">
-                <Link href="/category"> ({product.category})</Link>
+                <Link href={`/category/${product.category}`}> ({product.category})</Link>
               </span>
             </h2>
             <p className="text-[#919090] text-sm ">{product.description}</p>
