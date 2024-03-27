@@ -14,7 +14,7 @@ const ProductList = () => {
               >
             </div>
             <h2 className="text-sm lg:text-base mt-2">
-              <Link  className="text-base font-bold" href={`/products/${product.id}`}>
+              <Link className="text-base font-bold" href={`/products/${product.id}`}>
                 {product.title}
               </Link>
               <span className="text-[#919090]">
